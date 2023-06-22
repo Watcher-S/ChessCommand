@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.awt.Point;
+
 public class Interface {
     
     Space[][] chessBoard;
@@ -17,12 +20,12 @@ public class Interface {
         chessBoard[0][6] = new Knight(false, 0, 6);
         chessBoard[0][7] = new Rook(false, 0, 7);
         
-        chessBoard[1][0] = new Pawn(false, 1, 6);
-        chessBoard[1][1] = new Pawn(false, 1, 6);
-        chessBoard[1][2] = new Pawn(false, 1, 6);
-        chessBoard[1][3] = new Pawn(false, 1, 6);
-        chessBoard[1][4] = new Pawn(false, 1, 6);
-        chessBoard[1][5] = new Pawn(false, 1, 6);
+        chessBoard[1][0] = new Pawn(false, 1, 0);
+        chessBoard[1][1] = new Pawn(false, 1, 1);
+        chessBoard[1][2] = new Pawn(false, 1, 2);
+        chessBoard[1][3] = new Pawn(false, 1, 3);
+        chessBoard[1][4] = new Pawn(false, 1, 4);
+        chessBoard[1][5] = new Pawn(false, 1, 5);
         chessBoard[1][6] = new Pawn(false, 1, 6);
         chessBoard[1][7] = new Pawn(false, 1, 7);
 
@@ -82,6 +85,10 @@ public class Interface {
         
         // print the new chess board
         printBoard();
+
+        //FIXME pawn moves
+        System.out.println(chessBoard[6][6].possibleMoves());
+        System.out.println(chessBoard[1][4].possibleMoves());
     }
 
 
@@ -114,7 +121,15 @@ public class Interface {
         
         chessBoard[rowNEW][columnNEW] = chessBoard[rowOG][columnOG];
         chessBoard[rowOG][columnOG] = new Space();
-        
+
     }
+
+    public void printPossibleMoves(int row, int column) {
+        System.out.println("====================================");
+        //FIXME possible moves print
+
+    }
+
+
 
 }

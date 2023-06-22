@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class ChessMain {
     public static void main(String[] args) {
@@ -9,11 +10,13 @@ public class ChessMain {
 
         while (keepLoopGoing) {
             
-            System.out.print("Give Position of Pawn (row,col): ");
+            System.out.print("\npick a pawn (row col): ");
             int rowOriginal = sc.nextInt();
             int columnOriginal = sc.nextInt();
             
-            System.out.print("\nGive Move (row,col): ");
+            newInterface.printPossibleMoves(rowOriginal, columnOriginal);
+
+            System.out.print("\ngive move (row col): ");
             int rowNew = sc.nextInt();
             int columnNew = sc.nextInt();
             System.out.println();
@@ -31,6 +34,8 @@ public class ChessMain {
 
             System.out.println("\n\n\n");
         }
+
+        sc.close();
 
     }
 }

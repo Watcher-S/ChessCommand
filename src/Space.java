@@ -1,3 +1,6 @@
+import java.awt.Point;
+import java.util.ArrayList;
+
 public class Space {
     
     int row;
@@ -11,6 +14,15 @@ public class Space {
     public String toString() {
         return " ";
     }
+
+    public ArrayList<Point> possibleMoves() {
+        //FIXME possible moves for space
+        ArrayList<Point> moveList = new ArrayList<Point>();
+        System.out.println("OH NO");
+
+        return moveList;
+    }
+
 
 
 
