@@ -76,6 +76,9 @@ public class Pawn extends Space {
         return moveList;
     }
 
+
+
+    
     public String toString() {
         if (isWhite) {
             return "♙";

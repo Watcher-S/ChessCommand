@@ -25,7 +25,6 @@ public class Space {
 
 
 
-
     // how it moves -> return option choices
 
     // can it move?
