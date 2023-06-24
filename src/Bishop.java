@@ -19,6 +19,10 @@ public class Bishop extends Space {
         return "A1";
     }
 
+    public Boolean isSpace() {
+        return false;
+    }
+
     public String toString() {
         if (isWhite) {
             return "♗";

@@ -86,9 +86,6 @@ public class Interface {
         // print the new chess board
         printBoard();
 
-        //FIXME pawn moves
-        System.out.println(chessBoard[6][6].possibleMoves());
-        System.out.println(chessBoard[1][4].possibleMoves());
     }
 
 
@@ -125,9 +122,21 @@ public class Interface {
     }
 
     public void printPossibleMoves(int row, int column) {
-        System.out.println("====================================");
-        //FIXME possible moves print
+        System.out.println("\n\n====================================");
+        
+        int x = -1;
+        int y = -1;
 
+        System.out.print("| ");
+        
+        for (int i = 0; i < chessBoard[row][column].possibleMoves().size(); i++) {
+            x = (int)chessBoard[row][column].possibleMoves().get(i).getX();
+            y = (int)chessBoard[row][column].possibleMoves().get(i).getY();
+            System.out.print(x + " " + y + " | ");
+        }
+
+        System.out.println("\n\n====================================");
+        
     }
 
 

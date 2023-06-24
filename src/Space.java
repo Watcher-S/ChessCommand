@@ -23,6 +23,9 @@ public class Space {
         return moveList;
     }
 
+    public Boolean isSpace() {
+        return true;
+    }
 
 
     // how it moves -> return option choices

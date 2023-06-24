@@ -26,7 +26,9 @@ public class Pawn extends Space {
             if (row > 0) {
                 //regular move
                 Point regularMove = new Point(row-1, column);
-                moveList.add(regularMove);
+                if ( (row-1 >= 0 && row-1 <= 7) && (column >= 0 && column <= 7) ) {
+                    moveList.add(regularMove);
+                }
 
                 // if still in OG position
                 if (row == 6) {
@@ -34,12 +36,17 @@ public class Pawn extends Space {
                     moveList.add(jumpMove);
                 }
 
-                //when taking a pawn
+                //when taking
                 Point takeLeft = new Point(row-1, column-1);
-                moveList.add(takeLeft);
+                if ( (row-1 >= 0 && row-1 <= 7) && (column-1 >= 0 && column-1 <= 7) ) {
+                    moveList.add(takeLeft);
+                }
                 
                 Point takeRight = new Point(row-1, column+1);
-                moveList.add(takeRight);
+                if ( (row-1 >= 0 && row-1 <= 7) && (column+1 >= 0 && column+1 <= 7) ) {
+                    moveList.add(takeRight);
+                }
+
 
             }
             else {
@@ -51,7 +58,9 @@ public class Pawn extends Space {
             if (row < 7) {
                 //regular move
                 Point regularMove = new Point(row+1, column);
-                moveList.add(regularMove);
+                if ( (row+1 >= 0 && row+1 <= 7) && (column >= 0 && column <= 7) ) {
+                    moveList.add(regularMove);
+                }
 
                 // if still in OG position
                 if (row == 1) {
@@ -59,12 +68,16 @@ public class Pawn extends Space {
                     moveList.add(jumpMove);
                 }
 
-                //when taking a pawn
+                //when taking
                 Point takeLeft = new Point(row+1, column-1);
-                moveList.add(takeLeft);
+                if ( (row+1 >= 0 && row+1 <= 7) && (column-1 >= 0 && column-1 <= 7) ) {
+                    moveList.add(takeLeft);
+                }
                 
                 Point takeRight = new Point(row+1, column+1);
-                moveList.add(takeRight);
+                if ( (row+1 >= 0 && row+1 <= 7) && (column+1 >= 0 && column+1 <= 7) ) {                    
+                    moveList.add(takeRight);
+                }
 
             }
             else {
@@ -76,8 +89,9 @@ public class Pawn extends Space {
         return moveList;
     }
 
-
-
+    public Boolean isSpace() {
+        return false;
+    }
     
     public String toString() {
         if (isWhite) {
